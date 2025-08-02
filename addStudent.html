@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Student</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+          body {
+            background: #ecf0f1;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+          }
+
+          .container {
+            max-width: 500px;
+            margin: 60px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+          }
+
+          h2 {
+            text-align: center;
+            color: #2c3e50;
+          }
+
+          label {
+            display: block;
+            margin-top: 20px;
+            font-weight: 600;
+          }
+
+          input[type="text"],
+          input[type="email"],
+          input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 16px;
+          }
+
+          button {
+            width: 100%;
+            margin-top: 30px;
+            padding: 12px;
+            background-color: #3498db;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+
+          button:hover {
+            background-color: #2980b9;
+          }
+
+          .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+          }
+
+          .back:hover {
+            text-decoration: underline;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <h2>Add New Student</h2>
+        <form action="AddStudentServlet" method="post">
+          <label for="name">Full Name</label>
+          <input type="text" name="name" id="name" required>
+
+          <label for="email">Email Address</label>
+          <input type="email" name="email" id="email" required>
+
+          <label for="course">Course</label>
+          <input type="text" name="course" id="course" required>
+
+          <label for="fee">Fee (₹)</label>
+          <input type="number" name="fee" id="fee" step="0.01" required>
+
+          <button type="submit">Add Student</button>
+        </form>
+        <a class="back" href="index.html">← Back to Dashboard</a>
+        </div>
+    </body>
+</html>
